@@ -440,11 +440,9 @@ Every element maps to a real geometric relationship. The cube completes all rota
 
 ---
 
-## Installation Options
+## Installation
 
-### Global Install (Recommended)
-
-Makes The Cube available in every Claude Code session:
+### Claude Code (CLI / Desktop / IDE)
 
 ```bash
 git clone https://github.com/mrdulasolutions/TheCube.git
@@ -452,21 +450,40 @@ cd TheCube
 ./install.sh
 ```
 
-### Manual Install
+This copies all 9 skills to `~/.claude/skills/`, making `/cube` available in every Claude Code session.
+
+Manual alternative:
 
 ```bash
 mkdir -p ~/.claude/skills
 cp .claude/skills/cube*.md ~/.claude/skills/
 ```
 
-### Project-Level Install
-
-Use The Cube only within a specific project:
+Project-level only:
 
 ```bash
 mkdir -p your-project/.claude/skills
 cp .claude/skills/cube*.md your-project/.claude/skills/
 ```
+
+### Claude.ai Chat / Cowork
+
+The Cube works in Claude.ai through **Projects**:
+
+1. Create a new Project on [claude.ai](https://claude.ai)
+2. Upload the skill files from `.claude/skills/` as knowledge (start with `cube.md` and `cube-quick.md`)
+3. Paste the contents of [`chat/project-instructions.md`](chat/project-instructions.md) into the project's custom instructions
+4. Start a conversation and say: **"Cube this: [your problem]"**
+
+See [`chat/SETUP.md`](chat/SETUP.md) for the full setup guide with tips and examples.
+
+| Claude Code | Claude.ai Chat |
+|------------|----------------|
+| `/cube [problem]` | "Cube this: [problem]" |
+| `/cube-sales [problem]` | "Cube sales: [problem]" |
+| `/cube-quick [problem]` | "Quick cube: [problem]" |
+| `/cube-face inversion [problem]` | "Deep dive inversion on [problem]" |
+| `/cube-guided [problem]` | "Guided cube: [problem]" |
 
 ---
 
@@ -497,6 +514,9 @@ TheCube/
 │   ├── cube-face.md         Single framework deep dive (all stacks)
 │   ├── cube-guided.md       Interactive mode (all stacks)
 │   └── cube-feedback.md     Feedback and telemetry
+├── chat/
+│   ├── SETUP.md             Claude.ai Projects setup guide
+│   └── project-instructions.md  Custom instructions for Claude.ai
 ├── CLAUDE.md                Project instructions for Claude Code
 ├── CONTRIBUTING.md          How to contribute
 ├── ETHOS.md                 Philosophy and design principles
