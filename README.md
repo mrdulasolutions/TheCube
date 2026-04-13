@@ -466,9 +466,27 @@ mkdir -p your-project/.claude/skills
 cp .claude/skills/cube*.md your-project/.claude/skills/
 ```
 
-### Claude.ai Chat / Cowork
+### Claude Cowork
 
-The Cube works in Claude.ai through **Projects**:
+> **Important:** Cowork mounts `~/.claude/skills/` as read-only. You cannot install skills from inside a Cowork session. Run the installer from your Mac's Terminal **before** starting Cowork.
+
+```bash
+git clone https://github.com/mrdulasolutions/TheCube.git
+cd TheCube
+./install.sh
+```
+
+After running this, start a new Cowork session. The `/cube`, `/cube-sales`, `/cube-quick`, and all other slash commands will appear automatically.
+
+If you already have the repo cloned, just run:
+
+```bash
+bash /path/to/TheCube/install.sh
+```
+
+### Claude.ai Chat (Projects)
+
+The Cube also works in Claude.ai chat through **Projects** (no install needed):
 
 1. Create a new Project on [claude.ai](https://claude.ai)
 2. Upload the skill files from `.claude/skills/` as knowledge (start with `cube.md` and `cube-quick.md`)
@@ -477,13 +495,19 @@ The Cube works in Claude.ai through **Projects**:
 
 See [`chat/SETUP.md`](chat/SETUP.md) for the full setup guide with tips and examples.
 
-| Claude Code | Claude.ai Chat |
-|------------|----------------|
-| `/cube [problem]` | "Cube this: [problem]" |
-| `/cube-sales [problem]` | "Cube sales: [problem]" |
-| `/cube-quick [problem]` | "Quick cube: [problem]" |
-| `/cube-face inversion [problem]` | "Deep dive inversion on [problem]" |
-| `/cube-guided [problem]` | "Guided cube: [problem]" |
+### Command Reference Across Environments
+
+| Action | Claude Code / Cowork | Claude.ai Chat |
+|--------|---------------------|----------------|
+| Core full rotation | `/cube [problem]` | "Cube this: [problem]" |
+| Sales stack | `/cube-sales [problem]` | "Cube sales: [problem]" |
+| Marketing stack | `/cube-marketing [problem]` | "Cube marketing: [problem]" |
+| Coding stack | `/cube-coding [problem]` | "Cube coding: [problem]" |
+| Quick scan | `/cube-quick [problem]` | "Quick cube: [problem]" |
+| Deep dive | `/cube-face inversion [problem]` | "Deep dive inversion on [problem]" |
+| Guided mode | `/cube-guided [problem]` | "Guided cube: [problem]" |
+| Stack list | `/cube-stack` | "What cubes are there?" |
+| Feedback | `/cube-feedback` | "Cube feedback" |
 
 ---
 
