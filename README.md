@@ -1,6 +1,16 @@
+<div align="center">
+
 # The Cube
 
 **See every problem from every angle.**
+
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/version-1.0-brightgreen.svg)]()
+[![Stacks](https://img.shields.io/badge/stacks-4-orange.svg)]()
+[![Frameworks](https://img.shields.io/badge/frameworks-24-red.svg)]()
+[![Skills](https://img.shields.io/badge/skills-9-purple.svg)]()
+[![Positions](https://img.shields.io/badge/positions-30-blueviolet.svg)]()
+[![Claude Code](https://img.shields.io/badge/built_for-Claude_Code-black.svg)](https://claude.ai/code)
 
 ```
 +-------------------------------------------+
@@ -9,6 +19,8 @@
 |          v1.0  |  30 Positions            |
 +-------------------------------------------+
 ```
+
+</div>
 
 The Cube is a problem-solving skill for [Claude Code](https://claude.ai/code) that maps six cognitive frameworks to the six faces of a Rubik's cube. Your problem goes at the core. The cube rotates through every geometric combination -- faces, edges, axes, corners -- producing **30 distinct analysis points** before returning to home position with a grand synthesis.
 
@@ -21,7 +33,7 @@ The throughline: every rotation forces you out of the frame the problem arrived 
 ### Install
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/TheCube.git
+git clone https://github.com/mrdulasolutions/TheCube.git
 cd TheCube
 ./install.sh
 ```
@@ -36,9 +48,66 @@ That's it. The Cube will crystallize your problem, rotate through all 30 positio
 
 ---
 
+## How It Works
+
+```mermaid
+flowchart LR
+    P["YOUR PROBLEM"] --> C{"THE CUBE"}
+    C --> F1["Phase 1\nFace Scan\n6 Positions"]
+    F1 --> F2["Phase 2\nEdge Rotations\n12 Positions"]
+    F2 --> F3["Phase 3\nAxis Tensions\n3 Positions"]
+    F3 --> F4["Phase 4\nCorner Rotations\n8 Positions"]
+    F4 --> F5["Phase 5\nGrand Synthesis\n1 Position"]
+    F5 --> R["RANKED SOLUTIONS\n+ SIMULATIONS"]
+
+    style P fill:#ff6b6b,color:#fff,stroke:none
+    style C fill:#1a1a2e,color:#fff,stroke:none
+    style F1 fill:#16213e,color:#fff,stroke:none
+    style F2 fill:#0f3460,color:#fff,stroke:none
+    style F3 fill:#533483,color:#fff,stroke:none
+    style F4 fill:#e94560,color:#fff,stroke:none
+    style F5 fill:#1a1a2e,color:#fff,stroke:none
+    style R fill:#00b894,color:#fff,stroke:none
+```
+
+---
+
 ## Stacks
 
 The Cube ships with **four domain-specific stacks** -- four complete Rubik's cubes, each with six frameworks tailored to a specific discipline. Same rotation protocol, different lenses.
+
+```mermaid
+flowchart TB
+    subgraph CORE["CORE /cube"]
+        direction LR
+        C1[Inversion] ~~~ C2[First Principles]
+        C3[Steelmanning] ~~~ C4[Second-Order]
+        C5[Pre-Mortem] ~~~ C6[Boundary]
+    end
+    subgraph SALES["SALES /cube-sales"]
+        direction LR
+        S1[Klaff] ~~~ S2[Rackham]
+        S3[Carnegie] ~~~ S4[Dixon]
+        S5[Ziglar] ~~~ S6[Sandler]
+    end
+    subgraph MARKETING["MARKETING /cube-marketing"]
+        direction LR
+        M1[Christensen] ~~~ M2[Ries & Trout]
+        M3[Miller] ~~~ M4[Kim & Mauborgne]
+        M5[Moore] ~~~ M6[Chen/Reforge]
+    end
+    subgraph CODING["CODING /cube-coding"]
+        direction LR
+        D1[Decomposition] ~~~ D2[Root Cause]
+        D3[Constraints] ~~~ D4[Trace]
+        D5[Edge Cases] ~~~ D6[MVP Proof]
+    end
+
+    style CORE fill:#1a1a2e,color:#fff,stroke:#e94560
+    style SALES fill:#1a1a2e,color:#fff,stroke:#ff6b6b
+    style MARKETING fill:#1a1a2e,color:#fff,stroke:#533483
+    style CODING fill:#1a1a2e,color:#fff,stroke:#00b894
+```
 
 | Stack | Command | Frameworks |
 |-------|---------|------------|
@@ -130,24 +199,31 @@ Structured feedback collection after an analysis. Saves to `.cube/feedback/` for
 
 ## The Six Faces
 
-```
-              +---------------+
-             /   FACE 5      /|
-            /  PRE-MORTEM   / |
-           /     (U)       /  |
-          +---------------+   |
-          |               |   |
- FACE 3   |   FACE 1      | FACE 4
-STEELMAN  |  INVERSION    |SECOND-ORDER
-  (L)     |    (F)        |  (R)
-          |               |   +
-          |               |  / FACE 2
-          |               | / FIRST PRINCIPLES
-          |               |/     (B)
-          +---------------+
-              FACE 6
-            BOUNDARY
-              (D)
+```mermaid
+graph TB
+    subgraph CUBE["THE CUBE — Face Layout"]
+        direction TB
+        U["UP (U)\nPre-Mortem"]
+        L["LEFT (L)\nSteelmanning"]
+        F["FRONT (F)\nInversion"]
+        R["RIGHT (R)\nSecond-Order"]
+        B["BACK (B)\nFirst Principles"]
+        D["DOWN (D)\nBoundary"]
+
+        U --- F
+        L --- F
+        F --- R
+        F --- D
+        F -.-> B
+    end
+
+    style U fill:#533483,color:#fff,stroke:none
+    style L fill:#0f3460,color:#fff,stroke:none
+    style F fill:#e94560,color:#fff,stroke:none
+    style R fill:#ff6b6b,color:#fff,stroke:none
+    style B fill:#16213e,color:#fff,stroke:none
+    style D fill:#00b894,color:#fff,stroke:none
+    style CUBE fill:#0a0a1a,color:#fff,stroke:#333
 ```
 
 | Face | Framework | Core Question |
@@ -169,6 +245,29 @@ Read [ETHOS.md](ETHOS.md) for the full philosophy.
 
 The cube arranges frameworks so opposite faces create productive tension:
 
+```mermaid
+graph LR
+    subgraph X-AXIS["X-AXIS: Destruction vs Construction"]
+        I["Inversion\n(F)"] <-->|"tension"| FP["First Principles\n(B)"]
+    end
+    subgraph Y-AXIS["Y-AXIS: Temporal vs Structural Failure"]
+        PM["Pre-Mortem\n(U)"] <-->|"tension"| BC["Boundary\n(D)"]
+    end
+    subgraph Z-AXIS["Z-AXIS: Resistance vs Consequences"]
+        SM["Steelmanning\n(L)"] <-->|"tension"| SO["Second-Order\n(R)"]
+    end
+
+    style I fill:#e94560,color:#fff,stroke:none
+    style FP fill:#16213e,color:#fff,stroke:none
+    style PM fill:#533483,color:#fff,stroke:none
+    style BC fill:#00b894,color:#fff,stroke:none
+    style SM fill:#0f3460,color:#fff,stroke:none
+    style SO fill:#ff6b6b,color:#fff,stroke:none
+    style X-AXIS fill:#0a0a1a,color:#fff,stroke:#e94560
+    style Y-AXIS fill:#0a0a1a,color:#fff,stroke:#533483
+    style Z-AXIS fill:#0a0a1a,color:#fff,stroke:#0f3460
+```
+
 | Axis | Faces | Tension |
 |------|-------|---------|
 | **X** | Inversion vs First Principles | Destruction vs Construction |
@@ -178,6 +277,38 @@ The cube arranges frameworks so opposite faces create productive tension:
 ---
 
 ## The Rotation Protocol
+
+```mermaid
+graph LR
+    subgraph P1["PHASE 1"]
+        F1["Face Scan\n6 solo analyses"]
+    end
+    subgraph P2["PHASE 2"]
+        F2["Edge Rotations\n12 adjacent pairs"]
+    end
+    subgraph P3["PHASE 3"]
+        F3["Axis Tensions\n3 opposite-pair\ndialectics"]
+    end
+    subgraph P4["PHASE 4"]
+        F4["Corner Rotations\n8 triple-framework\ntriangulations"]
+    end
+    subgraph P5["PHASE 5"]
+        F5["Grand Synthesis\nRanked solutions\n+ simulations"]
+    end
+
+    P1 --> P2 --> P3 --> P4 --> P5
+
+    style P1 fill:#16213e,color:#fff,stroke:#e94560
+    style P2 fill:#0f3460,color:#fff,stroke:#e94560
+    style P3 fill:#533483,color:#fff,stroke:#e94560
+    style P4 fill:#e94560,color:#fff,stroke:#e94560
+    style P5 fill:#1a1a2e,color:#fff,stroke:#00b894
+    style F1 fill:transparent,color:#fff,stroke:none
+    style F2 fill:transparent,color:#fff,stroke:none
+    style F3 fill:transparent,color:#fff,stroke:none
+    style F4 fill:transparent,color:#fff,stroke:none
+    style F5 fill:transparent,color:#fff,stroke:none
+```
 
 ### Phase 1: Face Scan (Positions 1-6)
 
@@ -288,11 +419,22 @@ learning why the 200 existing users stayed.
 
 The geometry is not decorative:
 
-- **6 faces** = 6 independent viewpoints
-- **12 edges** = 12 natural adjacencies where viewpoints meet
-- **3 axes** = 3 fundamental tensions between opposing viewpoints
-- **8 corners** = 8 triangulation points where three viewpoints converge
-- **1 core** = the problem itself, which never moves
+```mermaid
+pie title 30 Analysis Positions
+    "Faces (6)" : 6
+    "Edges (12)" : 12
+    "Axes (3)" : 3
+    "Corners (8)" : 8
+    "Synthesis (1)" : 1
+```
+
+| Element | Count | What It Represents |
+|---------|-------|--------------------|
+| Faces | 6 | Independent viewpoints |
+| Edges | 12 | Natural adjacencies where viewpoints meet |
+| Axes | 3 | Fundamental tensions between opposing viewpoints |
+| Corners | 8 | Triangulation points where three viewpoints converge |
+| Core | 1 | The problem itself, which never moves |
 
 Every element maps to a real geometric relationship. The cube completes all rotations and returns to home position -- every piece is back where it started, but you've seen the problem from every possible combination of angles.
 
@@ -305,7 +447,7 @@ Every element maps to a real geometric relationship. The cube completes all rota
 Makes The Cube available in every Claude Code session:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/TheCube.git
+git clone https://github.com/mrdulasolutions/TheCube.git
 cd TheCube
 ./install.sh
 ```
