@@ -64,9 +64,11 @@ Self-prompt: "What is the riskiest assumption? What is the smallest thing I can 
 
 ### OPPOSITE FACE PAIRS (Rotation Axes)
 
-- **X-Axis (F<>B):** Decomposition x Root Cause -- **Breadth vs Depth**. Break it apart vs dig to the bottom.
-- **Y-Axis (U<>D):** Edge Cases x MVP Proof -- **What Breaks vs What Works**. Pessimistic testing vs optimistic proving.
-- **Z-Axis (L<>R):** Constraint Mapping x Trace Execution -- **Theoretical Limits vs Actual Behavior**. What should happen vs what does happen.
+- **X-Axis (F<>B):** Decomposition x Root Cause -- **Breadth vs Depth**. Decomposition breaks the system into all its atomic pieces — a horizontal map of every component and interface. Root Cause Analysis follows one thread deep, asking "why?" five times until you hit the decision or missing requirement that started the problem. One gives you the whole picture; the other gives you the root. The tension reveals whether you need to understand the system or understand the cause — and which you should do first.
+
+- **Y-Axis (U<>D):** Edge Cases x MVP Proof -- **What Breaks vs What Works**. Edge Case Analysis is pessimistic — it probes every boundary (null, empty, max, concurrent) looking for where the code fails. MVP Proof is optimistic — it builds the smallest possible experiment to confirm the core theory works. One asks "where does it break?" The other asks "does it work at all?" The tension reveals whether you need to build confidence that the approach is viable, or build confidence that it won't fall apart.
+
+- **Z-Axis (L<>R):** Constraint Mapping x Trace Execution -- **Theoretical Limits vs Actual Behavior**. Constraint Mapping lists what SHOULD happen — every hard limit, business rule, and assumed boundary the system must respect. Trace the Execution shows what DOES happen — the actual runtime path with real data. Most bugs live in the gap between these. The tension reveals where the code violates constraints nobody documented, or respects constraints that no longer apply.
 
 ---
 
@@ -113,51 +115,51 @@ Display Complexity Assessment after all 6 faces.
 3-5 sentences each. End with Key Insight.
 
 #### [F-U] Position 7: "The Fragmentation Test" (Decomposition + Edge Cases)
-*Break it down, then test each piece at its edges.*
+*Decomposition breaks the system into pieces. Edge Case Analysis tests each piece at its boundaries — null, empty, max, concurrent. Together — systematic boundary testing of every component and every interface between them.*
 **Prompt:** "For each decomposed component, what are the edge cases? Which component breaks first at the boundaries? Are the interfaces between components handling edge cases correctly?"
 
 #### [F-R] Position 8: "The Walk-Through" (Decomposition + Trace Execution)
-*Break it down, then trace through each piece.*
+*Decomposition gives you the map. Trace the Execution walks the actual path with real data. Together — follow the real execution through each component and watch where reality diverges from the architecture diagram.*
 **Prompt:** "Walk the execution path through each decomposed component. Does data flow correctly across boundaries? Where does the trace show something unexpected in a specific component?"
 
 #### [F-D] Position 9: "The Building Blocks" (Decomposition + MVP Proof)
-*Smallest provable pieces assembled into solution.*
+*Decomposition identifies the pieces. MVP Proof tests the riskiest one in isolation. Together — find the component with the most dangerous assumption and prove it works (or doesn't) before touching anything else.*
 **Prompt:** "Which decomposed component contains the riskiest assumption? Build a proof for that one component alone. If the smallest piece works in isolation, what does that tell you about where the problem actually lives?"
 
 #### [F-L] Position 10: "The Puzzle Board" (Decomposition + Constraint Mapping)
-*Map which constraints apply to which pieces.*
+*Decomposition shows the pieces. Constraint Mapping shows the rules each piece must follow. Together — reveal which components are over-constrained by assumed limitations vs. which have real hard limits.*
 **Prompt:** "For each component, which constraints are binding? Are any components over-constrained by assumed limitations? Does decomposition reveal that a constraint applies to one piece but not others?"
 
 #### [B-U] Position 11: "The Fault Line" (Root Cause + Edge Cases)
-*Root causes that only appear at edge conditions.*
+*Root Cause digs deep to find the underlying flaw. Edge Cases probe the boundaries where flaws are exposed. Together — many root causes hide behind edge conditions, working fine at normal inputs but cracking at the boundaries.*
 **Prompt:** "Is the root cause only triggered at specific edge conditions? Many root causes hide behind edge cases -- the system works fine at normal inputs but the underlying flaw is exposed at the boundaries."
 
 #### [B-R] Position 12: "The Debugger" (Root Cause + Trace Execution)
-*Trace execution to where the root cause manifests.*
+*Root Cause asks 'why?' five levels deep. Trace the Execution follows the actual code path. Together — at each 'why' level, trace the real execution to find where the root cause first becomes visible in the running system.*
 **Prompt:** "Combine 5 Whys with execution tracing. At each 'why' level, trace the actual execution. Where in the actual code/data path does the root cause first become visible?"
 
 #### [B-D] Position 13: "The Hypothesis Test" (Root Cause + MVP Proof)
-*Minimal reproduction that proves the root cause.*
+*Root Cause proposes a theory. MVP Proof tests it with the smallest possible experiment. Together — if you can't reproduce the root cause in a minimal case, you haven't actually found the root cause.*
 **Prompt:** "Write the minimal reproduction case that proves the root cause you identified. If you cannot reproduce it minimally, you have not found the root cause. What is the smallest possible test?"
 
 #### [B-L] Position 14: "The Hidden Wall" (Root Cause + Constraint Mapping)
-*Constraints that ARE the root cause.*
+*Root Cause digs for the 'why'. Constraint Mapping lists every limit. Together — sometimes the root cause IS a constraint being hit (rate limit, memory ceiling, connection pool). The 'bug' is actually the system working as designed against an invisible wall.*
 **Prompt:** "Is a constraint itself the root cause? Sometimes the problem is not a bug -- it is a hard limit being hit (rate limit, memory ceiling, database connection pool). Is the 'bug' actually a constraint violation?"
 
 #### [U-L] Position 15: "The Corner Case" (Edge Cases + Constraint Mapping)
-*Edge cases that violate assumed constraints.*
+*Edge Cases test boundaries. Constraint Mapping lists assumed rules. Together — what happens when an edge case input violates a constraint nobody documented? The system assumes inputs are always positive, strings always ASCII, connections always available — until they aren't.*
 **Prompt:** "At the boundaries, which assumed constraints break? Does the system assume inputs are always positive, strings are always ASCII, connections are always available? What edge case violates a constraint nobody documented?"
 
 #### [U-R] Position 16: "The Failure Path" (Edge Cases + Trace Execution)
-*Trace what happens when edge cases hit.*
+*Edge Cases identify dangerous inputs. Trace the Execution follows what actually happens when they hit. Together — trace the code path when it receives null, empty, or max. Does it handle it? Or does it silently corrupt state?*
 **Prompt:** "Take each edge case and trace the execution path. Where does the code go when it receives null, empty, or max? Is there error handling? Does it silently corrupt state?"
 
 #### [D-L] Position 17: "The Spike" (MVP Proof + Constraint Mapping)
-*Minimal proof within real constraints.*
+*MVP Proof builds the smallest possible experiment. Constraint Mapping ensures it respects real limits. Together — if the proof only works by ignoring a real constraint, the solution is dead on arrival no matter how elegant.*
 **Prompt:** "Build the MVP proof, but respect all PROVEN constraints. If the proof works within real constraints, the solution is viable. If it only works by ignoring a real constraint, you need a different approach."
 
 #### [D-R] Position 18: "The Proof Trace" (MVP Proof + Trace Execution)
-*Build it small, trace it end to end.*
+*MVP Proof builds it small. Trace the Execution verifies it end to end. Together — build the minimal proof, then trace every step to confirm it actually does what you think it does, not what you hope it does.*
 **Prompt:** "Build the minimal proof, then trace its execution path completely. Does the proof actually do what you think it does? Does the trace confirm your theory or reveal something unexpected?"
 
 ---

@@ -70,9 +70,11 @@ Self-prompt: "What is our growth loop? Does the output of our product naturally 
 
 ### OPPOSITE FACE PAIRS (Rotation Axes)
 
-- **X-Axis (F<>B):** Jobs to Be Done x Positioning -- **Truth vs Perception**. What they actually need vs what they believe.
-- **Y-Axis (U<>D):** Crossing the Chasm x Growth Loops -- **Adoption Barriers vs Growth Mechanics**. What blocks growth vs what compounds it.
-- **Z-Axis (L<>R):** StoryBrand x Blue Ocean -- **Clarify the Story vs Rewrite the Game**. Perfect your message vs reinvent your market.
+- **X-Axis (F<>B):** Jobs to Be Done x Positioning -- **Truth vs Perception**. Christensen says customers hire products for real functional and emotional jobs — the causal "why" behind every purchase. Ries & Trout say marketing is a battle for the customer's mind — perception IS reality, regardless of the product's actual capability. One reveals what the customer truly needs; the other reveals what they believe they need. The gap between these is where most marketing goes wrong.
+
+- **Y-Axis (U<>D):** Crossing the Chasm x Growth Loops -- **Adoption Barriers vs Growth Mechanics**. Moore warns that a lethal gap exists between early adopters and mainstream — most products die here because these groups buy for fundamentally different reasons. Chen/Reforge says growth comes from closed loops where one cohort's output becomes the next cohort's input. One explains why growth stalls; the other explains how growth compounds. The tension reveals whether you're stuck because the loop is broken or because the chasm is blocking it.
+
+- **Z-Axis (L<>R):** StoryBrand x Blue Ocean -- **Clarify the Story vs Rewrite the Game**. Miller says confusion kills conversions — clarify your message so the customer instantly sees themselves as the hero of a story your brand guides. Kim & Mauborgne say stop competing — create uncontested market space through value innovation. One says tell your story better; the other says change the entire story. The tension reveals whether the market needs clearer communication or a fundamentally new category.
 
 ---
 
@@ -119,51 +121,51 @@ Display Complexity Assessment after all 6 faces.
 3-5 sentences each. Focus on emergent cross-insight. End with Key Insight.
 
 #### [F-U] Position 7: "The Adoption Bridge" (JTBD + Crossing the Chasm)
-*What job do mainstream customers need done?*
+*Christensen reveals the job customers hire you for. Moore warns that early adopters and mainstream hire for different reasons — the job itself may shift as you cross the chasm.*
 **Prompt:** "Early adopters hired your product for one job. The mainstream may hire it for a different job entirely. What job does the pragmatist mainstream need done, and is your product actually solving it?"
 
 #### [F-R] Position 8: "The Unmet Job" (JTBD + Blue Ocean)
-*Jobs nobody is serving = blue ocean opportunity.*
+*Christensen's JTBD surfaces jobs nobody is solving well. Kim & Mauborgne's Blue Ocean says uncontested space is where value is created. Together — unmet jobs ARE blue oceans.*
 **Prompt:** "What job are customers struggling with that no competitor addresses? Where does JTBD analysis reveal unmet demand that maps to uncontested market space?"
 
 #### [F-D] Position 9: "The Viral Job" (JTBD + Growth Loops)
-*Which job naturally creates word-of-mouth?*
+*Christensen identifies the job. Chen asks: does completing that job naturally create the next customer? The best growth loops are built on jobs that are inherently shareable.*
 **Prompt:** "Of the jobs your product does, which one naturally compels users to tell others? Where does the job itself create a growth loop?"
 
 #### [F-L] Position 10: "The Hero's Need" (JTBD + StoryBrand)
-*Frame the job as the hero's quest.*
+*Christensen says customers hire products for progress. Miller says customers are heroes with a problem, seeking a guide. Together — frame the job as the hero's quest.*
 **Prompt:** "The customer has a job to be done (JTBD). They are the hero (StoryBrand). How does the job map to the hero's external problem, internal frustration, and philosophical 'should'?"
 
 #### [B-U] Position 11: "The Beachhead" (Positioning + Crossing the Chasm)
-*Own the position in the segment that crosses first.*
+*Ries & Trout say own a word in the customer's mind. Moore says target one niche segment to cross the chasm. Together — own the position in the exact segment that crosses first.*
 **Prompt:** "What position can you own in the specific beachhead segment that will carry you across the chasm? What word belongs to you in THAT niche's mind?"
 
 #### [B-R] Position 12: "The Category Claim" (Positioning + Blue Ocean)
-*Position in uncontested space.*
+*Ries & Trout say the mind has limited slots and incumbents own the best ones. Kim & Mauborgne say create uncontested space. Together — position yourself in a category that doesn't exist yet, where every mental slot is open.*
 **Prompt:** "If you create a blue ocean, you can define the positioning from scratch. What new category can you name and own? What word will you plant in a mind that has no incumbent?"
 
 #### [B-D] Position 13: "The Growth Position" (Positioning + Growth Loops)
-*Position that feeds viral loops.*
+*Ries & Trout say your position must be memorable and distinct. Chen says growth comes from loops, not campaigns. Together — a position so clear it becomes part of how users describe themselves to others.*
 **Prompt:** "What positioning creates natural shareability? What position makes users want to tell others? Where does your owned word become part of how customers describe their own identity?"
 
 #### [B-L] Position 14: "The One-Liner" (Positioning + StoryBrand)
-*Story that captures the position in one sentence.*
+*Ries & Trout say own one idea. Miller says the customer must instantly understand the story. Together — one sentence that captures both your competitive position AND the hero's journey.*
 **Prompt:** "Combine your competitive position with StoryBrand clarity. Write the one sentence that captures both where you sit in the market AND the hero's journey. If your customer had to explain you in one breath, what would they say?"
 
 #### [U-L] Position 15: "The Bridge Story" (Crossing the Chasm + StoryBrand)
-*Narrative that carries early adopters to mainstream.*
+*Moore says visionaries and pragmatists buy for different reasons. Miller says the story must be clear. Together — how does the narrative evolve from 'this is revolutionary' to 'this is reliable'?*
 **Prompt:** "Early adopters buy the vision. Pragmatists buy the proven solution. What story bridges these two audiences? How does the narrative evolve from 'this is revolutionary' to 'this is reliable'?"
 
 #### [U-R] Position 16: "The New Market" (Crossing the Chasm + Blue Ocean)
-*Cross the chasm by creating a new market entirely.*
+*Moore says the chasm kills products competing in existing categories. Kim & Mauborgne say stop competing entirely. Together — what if the chasm disappears when there's no incumbent category to compare against?*
 **Prompt:** "What if the chasm exists because you are competing in an existing category? If you created a new category (blue ocean), would the chasm disappear because pragmatists have nothing to compare you to?"
 
 #### [D-L] Position 17: "The Story Loop" (Growth Loops + StoryBrand)
-*Narrative that fuels the growth engine.*
+*Chen says growth compounds when output becomes input. Miller says the customer's hero journey drives action. Together — the hero's success story IS the acquisition channel for the next hero.*
 **Prompt:** "How does the customer's hero journey itself become the growth loop? When the hero succeeds (using your product), does that success story naturally attract new heroes?"
 
 #### [D-R] Position 18: "The Flywheel" (Growth Loops + Blue Ocean)
-*New market with built-in compounding growth.*
+*Chen says growth loops compound. Kim & Mauborgne say uncontested markets have no friction from competitors. Together — a compounding loop with zero competitive drag.*
 **Prompt:** "In blue ocean space with no competition, what growth loop compounds fastest? When you are the only option for a new job, how does each customer mechanically bring the next?"
 
 ---

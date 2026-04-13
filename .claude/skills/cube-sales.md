@@ -70,9 +70,11 @@ Self-prompt: "What is their real pain? Have I qualified it deeply enough? Should
 
 ### OPPOSITE FACE PAIRS (Rotation Axes)
 
-- **X-Axis (F<>B):** Frame Control x SPIN Selling -- **Control vs Discovery**. Who leads the conversation?
-- **Y-Axis (U<>D):** Need Satisfaction x Pain Qualification -- **Desire vs Pain**. Toward pleasure or away from pain?
-- **Z-Axis (L<>R):** Rapport x Challenger -- **Warmth vs Hard Truth**. Be liked or be respected?
+- **X-Axis (F<>B):** Frame Control x SPIN Selling -- **Control vs Discovery**. Klaff says you must own the frame or the buyer's instincts reject you — the seller is the prize, not the pursuer. Rackham's research shows complex sales are won by asking questions, not asserting — the buyer should do most of the talking. These are opposite leadership styles. The tension reveals when to lead the conversation and when to let the buyer lead themselves to the close.
+
+- **Y-Axis (U<>D):** Need Satisfaction x Pain Qualification -- **Desire vs Pain**. Ziglar believes selling is a transfer of belief — if you genuinely help people get what they want, you earn the right to close. Sandler believes unqualified optimism wastes everyone's time — dig into real pain or walk away. One sells toward pleasure, the other sells away from fear. The tension reveals which motivational direction actually unlocks this specific buyer.
+
+- **Z-Axis (L<>R):** Rapport x Challenger -- **Warmth vs Hard Truth**. Carnegie built an empire on genuine warmth: become genuinely interested in people, make them feel important, never criticize. Dixon's research found that Challengers — reps who teach, tailor, and create constructive tension — consistently outperform Relationship Builders. The tension reveals whether this buyer needs to feel comfortable or needs to be pushed out of their current thinking.
 
 ---
 
@@ -119,51 +121,51 @@ Display Complexity Assessment after all 6 faces.
 3-5 sentences each. Focus on the emergent cross-insight. End with Key Insight.
 
 #### [F-U] Position 7: "The Pitch" (Frame Control + Need Satisfaction)
-*Frame dominance meets genuine service.*
+*Klaff's frame dominance meets Ziglar's genuine service — you control the room AND serve the buyer's real desires.*
 **Prompt:** "How do you control the frame while genuinely meeting the buyer's needs? Where does frame control enhance the sale, and where does it undermine trust?"
 
 #### [F-R] Position 8: "The Power Play" (Frame Control + Challenger)
-*Maximum assertiveness.*
+*Klaff's 'I am the prize' posture meets Dixon's 'teach them something new' mandate — maximum assertiveness from two directions.*
 **Prompt:** "Frame control + commercial teaching = the most assertive possible approach. When is this exactly right? When does it push too hard?"
 
 #### [F-D] Position 9: "The Trap Door" (Frame Control + Pain Qualification)
-*Controlling the frame while they discover their pain.*
+*You hold Klaff's frame while Sandler's pain funnel pulls the buyer deeper into their own problems — controlled descent.*
 **Prompt:** "You hold the frame. They discover their pain. How do you control the conversation's direction while letting the buyer go deep into their own problems?"
 
 #### [F-L] Position 10: "The Velvet Hammer" (Frame Control + Rapport)
-*Dominance with genuine warmth.*
+*Klaff says own the frame or lose the deal. Carnegie says make them feel genuinely important. These seem contradictory — but the best closers do both.*
 **Prompt:** "Klaff says own the frame. Carnegie says make them feel important. These seem contradictory. Where is the synthesis? How do you lead without alienating?"
 
 #### [B-U] Position 11: "The Discovery Close" (SPIN + Need Satisfaction)
-*Questions reveal needs, needs drive the close.*
+*Rackham's structured questions surface the need. Ziglar's philosophy says once you know the need, closing is an act of service — the buyer closes themselves.*
 **Prompt:** "SPIN questions surface the need. Ziglar says fulfill it. How does the questioning sequence naturally lead to the buyer closing themselves?"
 
 #### [B-R] Position 12: "The Teaching Question" (SPIN + Challenger)
-*Questions that challenge assumptions.*
+*Rackham asks questions to discover. Dixon asks questions to teach and reframe. Together — questions that don't just reveal the problem, they change how the buyer sees it.*
 **Prompt:** "Instead of just discovering -- teach through questions. What Implication and Need-Payoff questions would reframe how the buyer sees their problem?"
 
 #### [B-D] Position 13: "The Pain Funnel" (SPIN + Pain Qualification)
-*SPIN questions driving deep into Sandler pain.*
+*Rackham's Situation→Problem→Implication→Need-Payoff sequence meets Sandler's rule: no real pain, no real deal. Together — the deepest diagnostic in sales.*
 **Prompt:** "SPIN's structured questioning meets Sandler's pain funnel. What questions go beyond surface problems to uncover the real, emotional, budget-impacting pain?"
 
 #### [B-L] Position 14: "The Trusted Advisor" (SPIN + Rapport)
-*Discovery with genuine interest.*
+*Rackham's discovery questions powered by Carnegie's genuine curiosity — the buyer opens up because the interest is real, not rehearsed.*
 **Prompt:** "How does genuine curiosity (Carnegie) make SPIN questions more effective? How does the buyer's experience change when questions come from real interest vs technique?"
 
 #### [U-L] Position 15: "The Win-Win" (Need Satisfaction + Rapport)
-*Serving needs through authentic relationship.*
+*Ziglar's 'help enough people get what they want' meets Carnegie's authentic interest in people — the warmest, most relationship-driven approach in the cube.*
 **Prompt:** "Ziglar's service ethic + Carnegie's genuine interest = the most relationship-driven approach. When is this the right play? What kind of buyer responds to this?"
 
 #### [U-R] Position 16: "The Breakthrough" (Need Satisfaction + Challenger)
-*Teaching them what they need.*
+*Ziglar says fulfill the desire. Dixon says the buyer doesn't know what they need yet — teach them first. Together — you satisfy a need the buyer hasn't recognized.*
 **Prompt:** "What if the buyer doesn't know what they need? Challenger teaches, Ziglar serves. How do you satisfy a need the buyer hasn't recognized yet?"
 
 #### [D-L] Position 17: "The Empathetic Qualifier" (Pain Qualification + Rapport)
-*Using warmth to surface real pain.*
+*Sandler's pain funnel can feel surgical. Carnegie's warmth creates safety. Together — the buyer reveals real pain because they feel genuinely cared for, not interrogated.*
 **Prompt:** "Sandler's pain funnel can feel aggressive. Carnegie's warmth can feel soft. Together -- empathetic qualification. How do you create enough safety for the buyer to reveal real pain?"
 
 #### [D-R] Position 18: "The Hard Truth" (Pain Qualification + Challenger)
-*Pain-based qualification meets commercial teaching. Maximum honesty.*
+*Sandler has qualified real pain. Dixon has a commercial insight that challenges their current thinking. Together — maximum honesty delivered with surgical precision.*
 **Prompt:** "You know their pain is real. You have an insight that challenges their current approach. How do you deliver hard truth about their pain while maintaining the relationship?"
 
 ---
