@@ -10,11 +10,19 @@ Multi-dimensional problem-solving framework implemented as a suite of Claude Cod
 ├── cube-sales.md      Sales stack - Klaff, Rackham, Carnegie, Dixon, Ziglar, Sandler (/cube-sales)
 ├── cube-marketing.md  Marketing stack - Christensen, Ries, Miller, Kim, Moore, Chen (/cube-marketing)
 ├── cube-coding.md     Coding stack - Decomposition, Root Cause, Constraints, Trace, Edge, MVP (/cube-coding)
+├── cube-enterprise.md Enterprise stack - Cynefin, COSO ERM, Galbraith, Kotter, Stakeholders, COBIT (/cube-enterprise)
+├── cube-creative.md   Creative stack - de Bono, Altshuller/TRIZ, Gordon, Eno, IDEO, SCAMPER (/cube-creative)
+├── cube-founder.md    Founder stack - Sarasvathy, Thiel, Horowitz, Graham, Grove, Hoffman (/cube-founder)
+├── cube-adversarial.md Adversarial stack - Red Team, ACH, Devil's Advocacy, Chaos, Schneier, Taleb (/cube-adversarial)
+├── cube-enhance.md    Meta-skill - analyze and improve any skill (/cube-enhance)
 ├── cube-stack.md      Stack directory and selection (/cube-stack)
 ├── cube-quick.md      10-position quick scan, any stack (/cube-quick)
 ├── cube-face.md       Single framework deep dive, any stack (/cube-face)
 ├── cube-guided.md     Interactive phase-by-phase, any stack (/cube-guided)
 └── cube-feedback.md   Feedback collection (/cube-feedback)
+chat/
+├── SETUP.md             Claude.ai Projects setup guide
+└── project-instructions.md  Custom instructions for Claude.ai
 ```
 
 - `ETHOS.md` -- Philosophy and design principles
@@ -50,6 +58,10 @@ Each stack is a complete Rubik's cube with 6 domain-specific frameworks, unique 
 | Sales | `/cube-sales` | Sales methodology (Klaff, Rackham, Carnegie, Dixon, Ziglar, Sandler) |
 | Marketing | `/cube-marketing` | Marketing strategy (Christensen, Ries, Miller, Kim, Moore, Chen) |
 | Coding | `/cube-coding` | Engineering problem-solving |
+| Enterprise | `/cube-enterprise` | Risk, governance, compliance (Cynefin, COSO ERM, Galbraith, Kotter, Stakeholders, COBIT) |
+| Creative | `/cube-creative` | Divergent thinking, innovation (de Bono, TRIZ, Synectics, Oblique Strategies, Design Thinking, SCAMPER) |
+| Founder | `/cube-founder` | Startup strategy (Effectuation, Zero to One, Wartime/Peacetime, Default Alive/Dead, Inflection Points, Blitzscaling) |
+| Adversarial | `/cube-adversarial` | Red-team, threat modeling (Red Team, ACH, Devil's Advocacy, Chaos Engineering, Attack Trees, Antifragility) |
 
 ## Slash Commands
 
@@ -59,6 +71,11 @@ Each stack is a complete Rubik's cube with 6 domain-specific frameworks, unique 
 | `/cube-sales` | Sales stack full rotation |
 | `/cube-marketing` | Marketing stack full rotation |
 | `/cube-coding` | Coding stack full rotation |
+| `/cube-enterprise` | Enterprise stack full rotation |
+| `/cube-creative` | Creative stack full rotation |
+| `/cube-founder` | Founder stack full rotation |
+| `/cube-adversarial` | Adversarial stack full rotation |
+| `/cube-enhance [skill]` | Analyze and improve any installed skill |
 | `/cube-stack` | List all stacks |
 | `/cube-quick` | Fast 10-position scan (any stack) |
 | `/cube-face [framework]` | Deep dive into one framework (any stack) |
@@ -75,6 +92,7 @@ When modifying skills:
 - Key Insight tags are required after every analysis position
 - Phase transition markers are required between phases
 - Cross-references between positions should be used when later rotations connect to earlier ones
+- Edge rotation descriptors must explain both methodologies for non-practitioner scaffolding
 
 ## Telemetry
 
