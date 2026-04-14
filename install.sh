@@ -1,6 +1,7 @@
 #!/bin/bash
 # The Cube -- Installer
-# Copies all skills to ~/.claude/skills/ for global availability
+# Installs all skills to ~/.claude/skills/ for global availability
+# Works with Claude Code, Claude Cowork, and Claude Desktop
 
 set -e
 
@@ -15,26 +16,33 @@ if [ ! -d "$SKILL_DIR" ]; then
 fi
 
 SKILLS=(
-    "cube.md"
-    "cube-sales.md"
-    "cube-marketing.md"
-    "cube-coding.md"
-    "cube-stack.md"
-    "cube-quick.md"
-    "cube-face.md"
-    "cube-guided.md"
-    "cube-feedback.md"
+    "cube"
+    "cube-sales"
+    "cube-marketing"
+    "cube-coding"
+    "cube-stack"
+    "cube-quick"
+    "cube-face"
+    "cube-guided"
+    "cube-feedback"
 )
 
 mkdir -p "$DEST_DIR"
 
 INSTALLED=0
 for skill in "${SKILLS[@]}"; do
-    if [ -f "$SKILL_DIR/$skill" ]; then
-        cp "$SKILL_DIR/$skill" "$DEST_DIR/$skill"
+    src="$SKILL_DIR/${skill}.md"
+    if [ -f "$src" ]; then
+        # Standalone .md format (Claude Code)
+        cp "$src" "$DEST_DIR/${skill}.md"
+
+        # Directory/SKILL.md format (Cowork)
+        mkdir -p "$DEST_DIR/$skill"
+        cp "$src" "$DEST_DIR/$skill/SKILL.md"
+
         INSTALLED=$((INSTALLED + 1))
     else
-        echo "  Warning: $skill not found, skipping."
+        echo "  Warning: ${skill}.md not found, skipping."
     fi
 done
 
@@ -42,6 +50,8 @@ echo ""
 echo "  The Cube installed successfully. ($INSTALLED skills)"
 echo ""
 echo "  Location: $DEST_DIR"
+echo ""
+echo "  Works with: Claude Code | Cowork | Desktop"
 echo ""
 echo "  Stacks:"
 echo "    /cube [problem]             Core -- problem solving fundamentals"
@@ -56,5 +66,6 @@ echo "    /cube-guided [problem]      Interactive phase-by-phase (any stack)"
 echo "    /cube-stack                 List all stacks and frameworks"
 echo "    /cube-feedback              Rate an analysis"
 echo ""
-echo "  Open any Claude Code session and type /cube to start."
+echo "  For Cowork: start a new session after installing."
+echo "  For Chat:   see chat/SETUP.md for Claude.ai Projects setup."
 echo ""

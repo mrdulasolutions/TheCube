@@ -2,7 +2,7 @@
 
 ## For Cowork Users
 
-Cowork uses slash commands just like Claude Code, but it mounts `~/.claude/skills/` as **read-only** — you can't install from inside a session. Run the installer from your Mac's Terminal first:
+Run the installer from your Terminal, then start a new Cowork session:
 
 ```bash
 git clone https://github.com/mrdulasolutions/TheCube.git
@@ -10,7 +10,7 @@ cd TheCube
 ./install.sh
 ```
 
-Then start a new Cowork session. `/cube`, `/cube-sales`, `/cube-quick`, etc. will all be available as slash commands. **You're done** — the rest of this guide is for Claude.ai Chat (Projects).
+All slash commands (`/cube`, `/cube-sales`, `/cube-quick`, etc.) will be available immediately. **You're done** — the rest of this guide is for Claude.ai Chat (Projects).
 
 ---
 

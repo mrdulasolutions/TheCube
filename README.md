@@ -442,7 +442,9 @@ Every element maps to a real geometric relationship. The cube completes all rota
 
 ## Installation
 
-### Claude Code (CLI / Desktop / IDE)
+### Install (Claude Code, Cowork, Desktop)
+
+One command. Works everywhere.
 
 ```bash
 git clone https://github.com/mrdulasolutions/TheCube.git
@@ -450,52 +452,34 @@ cd TheCube
 ./install.sh
 ```
 
-This copies all 9 skills to `~/.claude/skills/`, making `/cube` available in every Claude Code session.
+This installs all 9 skills to `~/.claude/skills/` in both standalone and directory formats, so `/cube` works in Claude Code, Cowork, and Claude Desktop.
+
+> **Cowork users:** Run this in your Mac's Terminal, then start a new Cowork session. The skills will be available immediately.
 
 Manual alternative:
 
 ```bash
 mkdir -p ~/.claude/skills
 cp .claude/skills/cube*.md ~/.claude/skills/
-```
-
-Project-level only:
-
-```bash
-mkdir -p your-project/.claude/skills
-cp .claude/skills/cube*.md your-project/.claude/skills/
-```
-
-### Claude Cowork
-
-> **Important:** Cowork mounts `~/.claude/skills/` as read-only. You cannot install skills from inside a Cowork session. Run the installer from your Mac's Terminal **before** starting Cowork.
-
-```bash
-git clone https://github.com/mrdulasolutions/TheCube.git
-cd TheCube
-./install.sh
-```
-
-After running this, start a new Cowork session. The `/cube`, `/cube-sales`, `/cube-quick`, and all other slash commands will appear automatically.
-
-If you already have the repo cloned, just run:
-
-```bash
-bash /path/to/TheCube/install.sh
+for f in .claude/skills/cube*.md; do
+  name=$(basename "$f" .md)
+  mkdir -p ~/.claude/skills/$name
+  cp "$f" ~/.claude/skills/$name/SKILL.md
+done
 ```
 
 ### Claude.ai Chat (Projects)
 
-The Cube also works in Claude.ai chat through **Projects** (no install needed):
+No install needed — works through **Projects**:
 
 1. Create a new Project on [claude.ai](https://claude.ai)
 2. Upload the skill files from `.claude/skills/` as knowledge (start with `cube.md` and `cube-quick.md`)
 3. Paste the contents of [`chat/project-instructions.md`](chat/project-instructions.md) into the project's custom instructions
 4. Start a conversation and say: **"Cube this: [your problem]"**
 
-See [`chat/SETUP.md`](chat/SETUP.md) for the full setup guide with tips and examples.
+See [`chat/SETUP.md`](chat/SETUP.md) for the full setup guide.
 
-### Command Reference Across Environments
+### Command Reference
 
 | Action | Claude Code / Cowork | Claude.ai Chat |
 |--------|---------------------|----------------|
