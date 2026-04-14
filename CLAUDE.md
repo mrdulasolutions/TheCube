@@ -14,6 +14,11 @@ Multi-dimensional problem-solving framework implemented as a suite of Claude Cod
 ├── cube-creative.md   Creative stack - de Bono, Altshuller/TRIZ, Gordon, Eno, IDEO, SCAMPER (/cube-creative)
 ├── cube-founder.md    Founder stack - Sarasvathy, Thiel, Horowitz, Graham, Grove, Hoffman (/cube-founder)
 ├── cube-adversarial.md Adversarial stack - Red Team, ACH, Devil's Advocacy, Chaos, Schneier, Taleb (/cube-adversarial)
+├── cube-bias.md       Bias stack - Incentive, Availability, Social Proof, Anchoring, Loss Aversion, Confirmation (/cube-bias)
+├── cube-executive.md  Executive stack - CEO, CFO, COO, CMO, CPO, CTO (/cube-executive)
+├── cube-hats.md       Thinking Hats stack - de Bono's White, Red, Green, Blue, Black, Yellow (/cube-hats)
+├── cube-negotiate.md  Negotiation stack - Voss, Fisher/Ury, Cialdini, Thomas-Kilmann, Kahneman, Shell (/cube-negotiate)
+├── cube-systems.md    Systems stack - Meadows, Senge, Sterman, Kauffman/Gladwell, Goldratt (/cube-systems)
 ├── cube-enhance.md    Meta-skill - analyze and improve any skill (/cube-enhance)
 ├── cube-stack.md      Stack directory and selection (/cube-stack)
 ├── cube-quick.md      10-position quick scan, any stack (/cube-quick)
@@ -62,6 +67,11 @@ Each stack is a complete Rubik's cube with 6 domain-specific frameworks, unique 
 | Creative | `/cube-creative` | Divergent thinking, innovation (de Bono, TRIZ, Synectics, Oblique Strategies, Design Thinking, SCAMPER) |
 | Founder | `/cube-founder` | Startup strategy (Effectuation, Zero to One, Wartime/Peacetime, Default Alive/Dead, Inflection Points, Blitzscaling) |
 | Adversarial | `/cube-adversarial` | Red-team, threat modeling (Red Team, ACH, Devil's Advocacy, Chaos Engineering, Attack Trees, Antifragility) |
+| Bias | `/cube-bias` | Cognitive audit (Incentive Bias, Availability, Social Proof, Anchoring, Loss Aversion, Confirmation Bias) |
+| Executive | `/cube-executive` | C-Suite perspectives (CEO, CFO, COO, CMO, CPO, CTO) |
+| Hats | `/cube-hats` | Thinking modes (de Bono's White, Red, Green, Blue, Black, Yellow hats) |
+| Negotiation | `/cube-negotiate` | Deal-making (Voss, Fisher/Ury, Cialdini, Thomas-Kilmann, Kahneman, Shell) |
+| Systems | `/cube-systems` | Systems thinking (Meadows, Senge, Sterman, Kauffman/Gladwell, Goldratt) |
 
 ## Slash Commands
 
@@ -75,6 +85,11 @@ Each stack is a complete Rubik's cube with 6 domain-specific frameworks, unique 
 | `/cube-creative` | Creative stack full rotation |
 | `/cube-founder` | Founder stack full rotation |
 | `/cube-adversarial` | Adversarial stack full rotation |
+| `/cube-bias` | Bias stack full rotation |
+| `/cube-executive` | Executive stack full rotation |
+| `/cube-hats` | Thinking Hats stack full rotation |
+| `/cube-negotiate` | Negotiation stack full rotation |
+| `/cube-systems` | Systems stack full rotation |
 | `/cube-enhance [skill]` | Analyze and improve any installed skill |
 | `/cube-stack` | List all stacks |
 | `/cube-quick` | Fast 10-position scan (any stack) |
