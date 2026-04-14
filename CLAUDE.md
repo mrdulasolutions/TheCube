@@ -19,6 +19,7 @@ Multi-dimensional problem-solving framework implemented as a suite of Claude Cod
 ├── cube-hats.md       Thinking Hats stack - de Bono's White, Red, Green, Blue, Black, Yellow (/cube-hats)
 ├── cube-negotiate.md  Negotiation stack - Voss, Fisher/Ury, Cialdini, Thomas-Kilmann, Kahneman, Shell (/cube-negotiate)
 ├── cube-systems.md    Systems stack - Meadows, Senge, Sterman, Kauffman/Gladwell, Goldratt (/cube-systems)
+├── cube-models.md     Mental Models stack - Boyd, Munger, Christensen, Ohno, Pareto, Bastiat (/cube-models)
 ├── cube-enhance.md    Meta-skill - analyze and improve any skill (/cube-enhance)
 ├── cube-stack.md      Stack directory and selection (/cube-stack)
 ├── cube-quick.md      10-position quick scan, any stack (/cube-quick)
@@ -72,6 +73,7 @@ Each stack is a complete Rubik's cube with 6 domain-specific frameworks, unique 
 | Hats | `/cube-hats` | Thinking modes (de Bono's White, Red, Green, Blue, Black, Yellow hats) |
 | Negotiation | `/cube-negotiate` | Deal-making (Voss, Fisher/Ury, Cialdini, Thomas-Kilmann, Kahneman, Shell) |
 | Systems | `/cube-systems` | Systems thinking (Meadows, Senge, Sterman, Kauffman/Gladwell, Goldratt) |
+| Models | `/cube-models` | Mental models (OODA Loop, Circle of Competence, JTBD, 5 Whys, 80/20, Opportunity Cost) |
 
 ## Slash Commands
 
@@ -90,6 +92,7 @@ Each stack is a complete Rubik's cube with 6 domain-specific frameworks, unique 
 | `/cube-hats` | Thinking Hats stack full rotation |
 | `/cube-negotiate` | Negotiation stack full rotation |
 | `/cube-systems` | Systems stack full rotation |
+| `/cube-models` | Mental Models stack full rotation |
 | `/cube-enhance [skill]` | Analyze and improve any installed skill |
 | `/cube-stack` | List all stacks |
 | `/cube-quick` | Fast 10-position scan (any stack) |
