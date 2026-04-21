@@ -1,0 +1,15 @@
+{
+  "name": "the-cube",
+  "owner": {
+    "name": "MR Dula Solutions",
+    "url": "https://github.com/mrdulasolutions"
+  },
+  "plugins": [
+    {
+      "name": "the-cube",
+      "source": "./plugin",
+      "description": "Multi-dimensional problem solving — 14 stacks, 84 frameworks, 420 analysis positions",
+      "version": "2.2.0"
+    }
+  ]
+}

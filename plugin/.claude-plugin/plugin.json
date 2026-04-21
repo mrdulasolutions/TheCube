@@ -1,0 +1,28 @@
+{
+  "name": "the-cube",
+  "version": "2.2.0",
+  "description": "Multi-dimensional problem solving — 14 stacks, 84 frameworks, 420 analysis positions. Maps cognitive frameworks to a Rubik's cube and rotates through every geometric combination.",
+  "author": {
+    "name": "MR Dula Solutions",
+    "url": "https://github.com/mrdulasolutions"
+  },
+  "homepage": "https://github.com/mrdulasolutions/TheCube",
+  "repository": "https://github.com/mrdulasolutions/TheCube",
+  "license": "MIT",
+  "keywords": [
+    "problem-solving",
+    "frameworks",
+    "analysis",
+    "mental-models",
+    "decision-making",
+    "strategy",
+    "sales",
+    "marketing",
+    "coding",
+    "enterprise",
+    "creative",
+    "negotiation",
+    "systems-thinking"
+  ],
+  "compatibility": ["claude-code", "claude-desktop", "claude-cowork"]
+}
